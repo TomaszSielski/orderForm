@@ -14,6 +14,7 @@
                             id="dateRent"
                             name="dateRent"
                             type="date"
+                            class="dateRent"
                     /></label>
                 </div>
                 <div class="col_50">
@@ -22,6 +23,7 @@
                             id="lenghtRoute"
                             name="lenghtRoute"
                             placeholder="15 km"
+                            class="lenghtRoute"
                     /></label>
                 </div>
             </div>
@@ -33,6 +35,7 @@
                             id="durationDays"
                             name="durationDays"
                             placeholder="1"
+                            class="durationDays"
                     /></label>
                 </div>
                 <div class="col_50">
@@ -41,6 +44,7 @@
                             id="quantity"
                             name="quantity"
                             placeholder="40"
+                            class="quantity"
                     /></label>
                 </div>
             </div>
@@ -51,11 +55,12 @@
                             id="name"
                             name="name"
                             placeholder="Uzupełnij"
+                            class="name"
                     /></label>
                 </div>
                 <div class="col_50">
                     <label class="label"
-                        >Nazwa firmy<br /><input id="company" name="company" placeholder="Uzupełnij"
+                        >Nazwa firmy<br /><input id="company" name="company" placeholder="Uzupełnij" class="company"
                     /></label>
                 </div>
             </div>
@@ -64,35 +69,37 @@
                     <label class="label"
                         >Ulica numer domu<br /><input
                             id="address"
-                            name="address" placeholder="Uzupełnij"
+                            name="address" placeholder="Uzupełnij" class="address"
                     /></label>
                 </div>
                 <div class="col_50">
                     <label class="label"
                         >Kod pocztowy miejscowosc<br /><input
                             id="city"
-                            name="city" placeholder="Uzupełnij"
+                            name="city" placeholder="Uzupełnij" class="city"
                     /></label>
                 </div>
             </div>
             <div class="row_col clearfix">
                 <div class="col_50">
                     <label class="label"
-                        >email<br /><input id="email" name="email" type="email" placeholder="Uzupełnij"
+                        >email<br /><input id="email" name="email" type="email" placeholder="Uzupełnij" class="email"
                     /></label>
                 </div>
                 <div class="col_50">
-                    <label class="label">telefon<br /><input id="phone" name="phone" type="tel" placeholder="Uzupełnij"/>
+                    <label class="label">telefon<br /><input id="phone" name="phone" type="tel" placeholder="Uzupełnij" class="phone"/>
                 </div>
             </div>
             <div class="row_col">
                 <div class="col_50">
                     <label class="label"
-                        >Szczególy wynajmu<br /><input id="details" name="details" placeholder="Uzupełnij" 
+                        >Szczególy wynajmu<br /><input id="details" name="details" placeholder="Uzupełnij" class="details"
                     /></label>
                 </div>
             </div>
+            <button id="submit-button" type="submit">Wyślij</button>
         </form>
+        <button id="pokaz-button" type="button">pokaz</button>
         <script src="script.js"></script>
     </body>
 </html>
