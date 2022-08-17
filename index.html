@@ -6,11 +6,92 @@
         <link rel="stylesheet" href="style.css" />
     </head>
     <body>
-        <nav>
-            
-        </nav>
         <form id="submit-form">
-            
+            <div class="row_col clearfix">
+                <div class="col_50">
+                    <label class="label"
+                        >Data wynajmu *<br /><input
+                            id="dateRent"
+                            name="dateRent"
+                            type="date"
+                    /></label>
+                </div>
+                <div class="col_50">
+                    <label class="label"
+                        >Długość trasy *<br /><input
+                            id="lenghtRoute"
+                            name="lenghtRoute"
+                            placeholder="15 km"
+                    /></label>
+                </div>
+            </div>
+
+            <div class="row_col clearfix">
+                <div class="col_50">
+                    <label class="label"
+                        >Liczba dni *<br /><input
+                            id="durationDays"
+                            name="durationDays"
+                            placeholder="1"
+                    /></label>
+                </div>
+                <div class="col_50">
+                    <label class="label"
+                        >Liczba miejsc *<br /><input
+                            id="quantity"
+                            name="quantity"
+                            placeholder="40"
+                    /></label>
+                </div>
+            </div>
+            <div class="row_col clearfix">
+                <div class="col_50">
+                    <label class="label"
+                        >Imię i Nazwisko<br /><input
+                            id="name"
+                            name="name"
+                            placeholder="Uzupełnij"
+                    /></label>
+                </div>
+                <div class="col_50">
+                    <label class="label"
+                        >Nazwa firmy<br /><input id="company" name="company" placeholder="Uzupełnij"
+                    /></label>
+                </div>
+            </div>
+            <div class="row_col clearfix">
+                <div class="col_50">
+                    <label class="label"
+                        >Ulica numer domu<br /><input
+                            id="address"
+                            name="address" placeholder="Uzupełnij"
+                    /></label>
+                </div>
+                <div class="col_50">
+                    <label class="label"
+                        >Kod pocztowy miejscowosc<br /><input
+                            id="city"
+                            name="city" placeholder="Uzupełnij"
+                    /></label>
+                </div>
+            </div>
+            <div class="row_col clearfix">
+                <div class="col_50">
+                    <label class="label"
+                        >email<br /><input id="email" name="email" type="email" placeholder="Uzupełnij"
+                    /></label>
+                </div>
+                <div class="col_50">
+                    <label class="label">telefon<br /><input id="phone" name="phone" type="tel" placeholder="Uzupełnij"/>
+                </div>
+            </div>
+            <div class="row_col">
+                <div class="col_50">
+                    <label class="label"
+                        >Szczególy wynajmu<br /><input id="details" name="details" placeholder="Uzupełnij" 
+                    /></label>
+                </div>
+            </div>
         </form>
         <script src="script.js"></script>
     </body>

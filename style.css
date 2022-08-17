@@ -1,0 +1,23 @@
+.row_col {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 1rem;
+}
+body {
+    font-family: "Poppins-Regular", arial, sans-serif;
+    line-height: 2;
+    color: var(--color-main, #2d2d2d);
+}
+.col_50 {
+    width: 48%;
+}
+.clearfix:after {
+    display: block;
+    content: "";
+    clear: both;
+}
+*,
+::after,
+::before {
+    box-sizing: border-box;
+}
