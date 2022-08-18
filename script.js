@@ -9,6 +9,18 @@ function pokaz() {
         alert(e);
     });
 }
+function checkRequirementInputs() {
+    let len = inputFields.length;
+    let emp = "";
+    for (let i = 0; i < len; i++) {
+        emp = inputFields[i].value;
+        if (emp == "") {
+            return false;
+        } else {
+            return true;
+        }
+    }
+}
 //adding div to body
 function wklej() {
     let html = `<div class="wklejka" id="wklejka">
@@ -29,6 +41,7 @@ function wklej() {
     let kasujBtn = document.getElementById("delete-button");
     kasujBtn.addEventListener("click", deleteCard);
 } //inserting data from localstore to div
+
 function insertDataFromLocalStoreToDiv() {
     formData = JSON.parse(localStorage.getItem("formData")) || [];
     if (formData.length > 0) {
@@ -54,27 +67,32 @@ function insertDataFromLocalStoreToDiv() {
     }
     pokaz();
 }
+
 // remove div form body
 function deleteCard() {
     const div = document.getElementById("wklejka");
     div.remove();
 }
+
 // save whole form to localstore
 function zapiszDoLocalStorage() {
-    let data = [];
-    let len = formData.length;
-    let id = 0;
-    if (len > 0) {
-        id = formData[len - 1][0];
+    if (checkRequirementInputs() == true) {
+        let data = [];
+        let len = formData.length;
+        let id = 0;
+        if (len > 0) {
+            id = formData[len - 1][0];
+        }
+        data[0] = id + 1;
+        for (let i = 0; i < inputFields.length; i++) {
+            data[i + 1] = inputFields[i].value;
+        }
+        formData[len] = data;
+        localStorage.setItem("formData", JSON.stringify(formData));
+        submitForm.reset();
     }
-    data[0] = id + 1;
-    for (let i = 0; i < inputFields.length; i++) {
-        data[i + 1] = inputFields[i].value;
-    }
-    formData[len] = data;
-    localStorage.setItem("formData", JSON.stringify(formData));
-    submitForm.reset();
 }
+
 //get latest date from localstore
 function getLatestData() {
     formData = JSON.parse(localStorage.getItem("formData")) || [];
@@ -93,6 +111,7 @@ function loadData() {
         insertDataFromLocalStoreToDiv(e);
     });
 }
+
 submitForm.addEventListener("submit", (e) => {
     e.preventDefault();
 });
